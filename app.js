@@ -1,4 +1,4 @@
-import dotenv from "dotenv" 
+import dotenv from "dotenv"
 dotenv.config()
 
 import express from "express"
@@ -21,10 +21,13 @@ app.use(express.json())
 
 
 // Load Routes 
+app.use("/", (req, res) => {
+    res.status(200).json({ message: "your app is running successfully" })
+})
 app.use("/api/user", userRoutes)
 
 
-app.listen (port, ()=>{
+app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);
-    
+
 })
