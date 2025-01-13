@@ -11,14 +11,13 @@ let transporter = nodemailer.createTransport({
         pass: process.env.EMAIL_PASS,
     },
 });
-transporter.verify((error, success) => {
-    if (error) {
-        console.log('SMTP Connection Error:', error);
-    } else {
-        console.log('SMTP Server is ready to send emails.');
-    }
-});
-
+// transporter.verify((error, success) => {
+//     if (error) {
+//         console.log('SMTP Connection Error:', error);
+//     } else {
+//         console.log('SMTP Server is ready to send emails.');
+//     }
+// });
 
 
 
