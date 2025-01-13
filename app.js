@@ -21,9 +21,6 @@ app.use(express.json())
 
 
 // Load Routes 
-app.use("/", (req, res) => {
-    res.status(200).json({ message: "your app is running successfully" })
-})
 app.use("/api/user", userRoutes)
 
 
